@@ -111,6 +111,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
+            m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove, 1f);
 
 
             if (m_CharacterController.isGrounded)
